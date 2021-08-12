@@ -1,8 +1,7 @@
 
-
 function App() {
   return (
-    <p>Hello</p>
+    <p>Hello Haj!</p>
   );
 }
 
