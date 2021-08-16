@@ -2,7 +2,7 @@ import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
-import { seedDatabase } from '../seed.js';
+import { seedDatabase } from '../seed';
 
 const config = {
     apiKey: "AIzaSyCCr9NrCkdIJO0XsdnVNdrdpsnK_nSgk90",
@@ -18,7 +18,5 @@ const { FieldValue } = Firebase.firestore;
 
 // call the seed file only once
 seedDatabase(firebase);
-
-console.log('firebase', firebase);
 
 export { firebase, FieldValue };
