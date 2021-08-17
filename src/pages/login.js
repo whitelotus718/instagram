@@ -28,7 +28,7 @@ export default function Login(){
                 />
             </div>
             <div className="flex flex-col w-2/5">
-                <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4">
+                <div className="flex flex-col items-center bg-white p-4 border border-gray-primary mb-4 rounded">
                     <h1 className="flex justify-center w-full">
                         <img src="/images/logo.png" alt="Instagram" className="" />
                     </h1>
@@ -54,15 +54,14 @@ export default function Login(){
                             disabled={isInvalid}
                             type="submit"
                             className={
-                                `bg-blue-500 text-white w-full rounded h-8 font-bold 
+                                `bg-blue-medium text-white w-full rounded h-8 font-bold 
                                 ${isInvalid && 'opacity-50'}`}
                         >
                                 Log In
                         </button>
                     </form>
                 </div>
-                <div className="flex justify-center items-center flex-col w-full bg-white p-4 
-                border border-gray-primary">
+                <div className="flex justify-center items-center flex-col w-full bg-white p-4 rounded border border-gray-primary">
                     <p className="text-sm">Don't have an account?{` `}
                         <Link to="/signup" className="font-bold text-blue-medium">
                             Sign Up
