@@ -8,26 +8,28 @@ import useAuthListener from './hooks/use-auth-listener';
 
 const Login = lazy( () => import('./pages/login'));
 const SignUp = lazy(() => import('./pages/sign-up'));
+// const Dashboard = lazy(() => import('./pages/dashboard'));
 const NotFound = lazy(() => import('./pages/not-found'));
-const Dashboard = lazy(() => import('./pages/dashboard'));
 
 function App() {
-  const { user } = useAuthListener();
-
+  // const { user } = useAuthListener();
+  
   return (
-    <UserContext.Provider value={{ user }}>
+    // <UserContext.Provider value={{ user }}>
       <Router>
         <Suspense fallback={<p>Loading...</p>}>
           <Switch>
             <Route path={ROUTES.LOGIN} component={Login} />
             <Route path={ROUTES.SIGN_UP} component={SignUp} />
-            <Route path={ROUTES.DASHBOARD} component={Dashboard} />
+            
             <Route component={NotFound} />
           </Switch>
         </Suspense>
       </Router>
-    </UserContext.Provider>
+    // </UserContext.Provider>
     );
 }
 
 export default App;
+
+{/* <Route path={ROUTES.DASHBOARD} component={Dashboard} /> */}
